@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %} list {% endblock%}
+{% block content %}
+<h1>首页</h1>
+<p>You have <strong>{{ posts.length }}</strong> 条内容!</p>
+<p><a href="/list/add">新建一条内容</a></p>
+<ul id="posts">
+        {% for post in posts %}
+        <li>
+            <h2>{{ post.title }}</h2>
+            <p><a href="/list/{{ post.id }}">Read post</a></p>
+          </li>
+    {% endfor %}
+</ul>
+   
+{% endblock %}

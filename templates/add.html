@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block title %} 添加文章 {% endblock %}
+{% block content %}
+    <h1>发布内容</h1>
+    <form action="/add" method="post">
+    <p><input type="text" placeholder="Title" name="title"></p>
+    <p><textarea placeholder="Contents" name="body"></textarea></p>
+    <p><input type="submit" value="Create"></p>
+    </form>
+{% endblock %}
